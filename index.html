@@ -14,7 +14,14 @@
             font-weight: bold;
             padding-left: 20px;
         }
+        
+        button {
+            margin-top: 15px;
+        }
     
+        hr {
+            margin: 20px 0px;
+        }
     
     </style>
     
@@ -22,9 +29,8 @@
 </header>
 
 <body>
-    
-    
-        Write a JavaScript program to display the current day and time in the following format. 
+        
+        01. Write a JavaScript program to display the current day and time in the following format. 
         <p>Sample Output : Today is : Friday.</p>
         <p>Current time is : 4 PM : 50 : 22</p>
     
@@ -35,9 +41,21 @@
 
     <div id='currentTime'></div>
     
+        <hr>    
     
+        02. Write a JavaScript program to print the contents of the current window.
+    <div>
     
+        <button onclick="printWindow()">Print this page</button>
     
+    </div>
+    
+    <hr>
+    
+    03. Write a JavaScript program to get the current date.
+    <p>Expected Output: mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</p>
+    
+    <div id='currentDate'></div>
     
     <script>
         
@@ -47,7 +65,7 @@
         //currently hour - 12 hours type 
         document.getElementById('currentTime').innerHTML = 'Current time is: ' + hour + AmPm + ' : ' + min + ' : ' + sec;
     
-    
+        document.getElementById('currentDate').innerHTML = date01 + ', ' + date02 + ' or ' + date03 + ', ' + date04;
     
     
     </script>
