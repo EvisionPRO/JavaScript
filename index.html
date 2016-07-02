@@ -1,11 +1,15 @@
 <html>
 
-<header>
+<header class='header'>
     
     <script src="app.js" type="text/javascript"></script>
     
     <style type="text/css">
     
+        .header {
+            display: none;
+        }
+        
         
         
         div {
@@ -22,13 +26,15 @@
         hr {
             margin: 20px 0px;
         }
+        
+        
     
     </style>
     
     
 </header>
 
-<body>
+<body onload="rotateText('target')">
         
         01. Write a JavaScript program to display the current day and time in the following format. 
         <p>Sample Output : Today is : Friday.</p>
@@ -57,6 +63,23 @@
     
     <div id='currentDate'></div>
     
+    <hr>
+    
+    
+    <p>04. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</p>    
+        
+    <div id='target'>w3resource</div>
+    
+    <hr>
+    
+    05. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
+    
+    <div><p>To see results please use Inspect Element and Console</p></div>
+    
+    <hr>
+    
+    
+    
     <script>
         
         //today's day a week
@@ -66,8 +89,29 @@
         document.getElementById('currentTime').innerHTML = 'Current time is: ' + hour + AmPm + ' : ' + min + ' : ' + sec;
     
         document.getElementById('currentDate').innerHTML = date01 + ', ' + date02 + ' or ' + date03 + ', ' + date04;
+        
+        
+        
+        function rotateText(id){
+        
+            var element = document.getElementById('target');
+            var textNode = element.childNodes[0];
+            var text = textNode.data;
+            
+            
+            setInterval(function(){ 
+                
+                text = text[text.length - 1] + text.substring(0, text.length - 1);  
+                textNode.data = text;                      
+            }, 700);
     
-    
+        };
+        
+        
+        
+
+        
+        
     </script>
     
     
