@@ -29,7 +29,7 @@ var year = today.getFullYear();
 
 var oneMonth = today.getMonth();
 
-var month = [1,2,3,4,5,6,7,8,9,10];
+var month = [1,2,3,4,5,6,7,8,9,10,11];
 
 var date = today.getDate();
 
@@ -42,15 +42,21 @@ var date03 = date + '-' + month[oneMonth] + '-' + year;
 var date04 = date + '/' + month[oneMonth] + '/' + year;
 
 
-//rotate w3resource
+//05 Sunday January 01 between 2014 and 2050
 
-var w3 = "w3resource";
+ for ( year = 2014; year <= 2050; year++){
+    
+    var d = new Date(year, 0, 1);
 
-for (var i=0; i < w3.length; i++){
-    console.log(w3[i]);
-}
+    if ( d.getDay() === 0)
+            
+      console.log('1st January is being a Sunday - ' + year);
+                 
+};
 
 
-console.log(w3);
+    
+
+
 
 
