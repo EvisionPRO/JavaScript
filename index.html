@@ -78,9 +78,44 @@
     
     <hr>
     
+     06. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
+    
+    <h2>Guess my number?</h2>
+    
+    <div id='guessNumber'></div>
+    
+    <input type="text" placeholder="Number between 1 and 10" id='form'><br />
+    <input type="submit" value="Check It NOW!" id='submit'>
+    
+    <hr>
+    
+    07. Write a JavaScript program to calculate days left until next Christmas. 
+    <div id='christmas'></div>
+    
+    <hr>
+    
+    08. Write a JavaScript program to calculate multiplication and division of two numbers (input from user)
+    
+    <p>1st Number <input type="text" id='firstNumber'></p>
+    <p>2nd Number <input type="text" id='secondNumber'></p>
+    <p><input type="submit" value="Multiply" id="multiply" onclick="multiplyNumbers()"><input type="submit" value="Divide" id="divide" onclick="divideNumbers()"></p>
+    
+    <div>The result is: <span id='results'></span></div>
+    
+    <hr>
+    
+    09. Write a JavaScript program to get the website URL (loading page).
+    
+    <div id='pageUrl'></div>
+
     
     
     <script>
+        
+        //website url
+        document.getElementById("pageUrl").innerHTML =
+        "Page hostname is " + window.location.hostname;        
+        
         
         //today's day a week
         document.getElementById('todayIs').innerHTML = 'Today is: ' + week[day];
@@ -92,13 +127,14 @@
         
         
         
+       //rotate last letter forn the string into first position
         function rotateText(id){
         
             var element = document.getElementById('target');
             var textNode = element.childNodes[0];
             var text = textNode.data;
             
-            
+            //set up time delay 
             setInterval(function(){ 
                 
                 text = text[text.length - 1] + text.substring(0, text.length - 1);  
@@ -108,8 +144,76 @@
         };
         
         
+    
         
+   //Guess my number game (numbers between 1-10)     
+    var x = Math.random() * 10;
+        
+    var y = Math.floor(x) + 1;
+        
+    var z = document.getElementById('form');
+    
 
+        
+    document.getElementById('submit').onclick = function(){
+        
+        
+        if (z.value === "" || z.value > 10 || z.value < 0) {
+            
+           document.getElementById('guessNumber').innerHTML = 'Please provide number between 1 and 10';
+        } else {
+            
+            if (z.value == y) {
+                
+document.getElementById('guessNumber').innerHTML = 'Congratulation!!! You did it :)';
+            
+            } else {
+            
+            document.getElementById('guessNumber').innerHTML = 'I\'m sorry, try one more time';
+            }
+
+        }
+  };
+        
+        //Calculating date until Christmas
+        
+        today = new Date();
+        
+        var christmas = new Date (today.getFullYear(), 11, 25);
+        
+            if (today.getMonth() == 11 && today.getDate() > 25 ){
+
+                christmas.setFullYear(christmas.getFullYear() + 1);
+            }
+        
+        var oneDay = 1000 * 60 * 60 * 24;
+        
+        var howMany = (Math.ceil((christmas.getTime() - today.getTime())/oneDay));
+        
+        
+        document.getElementById('christmas').innerHTML = 'It\'s ' + howMany + ' days left to Christmas!'; 
+        
+        
+       // Multiply and divide
+        
+        function multiplyNumbers (){
+            
+            num1 = document.getElementById('firstNumber').value;
+            num2 = document.getElementById('secondNumber').value;
+            
+            document.getElementById('results').innerHTML = num1 * num2;
+            
+        }
+        
+        function divideNumbers (){
+            
+            num1 = document.getElementById('firstNumber').value;
+            num2 = document.getElementById('secondNumber').value;
+            
+            document.getElementById('results').innerHTML = num1 / num2;
+            
+        }
+        
         
         
     </script>
