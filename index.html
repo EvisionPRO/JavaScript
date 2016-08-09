@@ -1,188 +1,532 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+      
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+      
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<header class='header'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+      
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+      
+    <!--Aditional CSS and JavaScript files -->
+      
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+      <script src="test.js"></script>
+      
+  </head>
     
-    <script src="app.js" type="text/javascript"></script>
+  <body data-spy="scroll" data-target="#myNavbar" data-offset="70">
+      <!--
+      <nav class="nav nav-inline">
+          <a class="nav-link active" href="#">Active</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link disabled" href="#">Disabled</a>
+      </nav> -->
+      
+      
+      <nav id='myNavbar' class="navbar navbar-fixed-top navbar-dark bg-faded" style="background-color: #013958">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+          </button>
+          <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+            <a class="navbar-brand" id="logo">JavaScript</a>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="#basic">Basic</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recursion">Recursion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#function">Function</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#conditionals">Conditionals</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#array">Array</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+      
     
-    <style type="text/css">
-    
-        .header {
-            display: none;
-        }
-        
-        
-        
-        div {
+
+      <div class='container'>
+      
+          <section id="basic" class="title">
+            <div class="container">
+                <h1>Basic</h1>
+               
+                
+                 <div>
             
-            font-size: 1.1em;
-            font-weight: bold;
-            padding-left: 20px;
-        }
-        
-        button {
-            margin-top: 15px;
-        }
-    
-        hr {
-            margin: 20px 0px;
-        }
-        
-        
-    
-    </style>
-    
-    
-</header>
+                01. Write a JavaScript program to display the current day and time in the following format.
+                <p>Sample Output : Today is : Friday.<br />
+                Current time is : 4 PM : 50 : 22</p>
 
-<body onload="rotateText('target')">
-        
-        01. Write a JavaScript program to display the current day and time in the following format. 
-        <p>Sample Output : Today is : Friday.</p>
-        <p>Current time is : 4 PM : 50 : 22</p>
-    
-    
-    
-    <div id='todayIs'></div>
+                <div class="alert alert-success space-after" role="alert">
+
+                    <p>Today is: <span id='todayIs'></spanid></p>
 
 
-    <div id='currentTime'></div>
-    
-        <hr>    
-    
-        02. Write a JavaScript program to print the contents of the current window.
-    <div>
-    
-        <button onclick="printWindow()">Print this page</button>
-    
-    </div>
-    
-    <hr>
-    
-    03. Write a JavaScript program to get the current date.
-    <p>Expected Output: mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</p>
-    
-    <div id='currentDate'></div>
-    
-    <hr>
-    
-    
-    <p>04. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</p>    
-        
-    <div id='target'>w3resource</div>
-    
-    <hr>
-    
-    05. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
-    
-    <div><p>To see results please use Inspect Element and Console</p></div>
-    
-    <hr>
-    
-     06. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
-    
-    <h2>Guess my number?</h2>
-    
-    <div id='guessNumber'></div>
-    
-    <input type="text" placeholder="Number between 1 and 10" id='form'><br />
-    <input type="submit" value="Check It NOW!" id='submit'>
-    
-    <hr>
-    
-    07. Write a JavaScript program to calculate days left until next Christmas. 
-    <div id='christmas'></div>
-    
-    <hr>
-    
-    08. Write a JavaScript program to calculate multiplication and division of two numbers (input from user)
-    
-    <p>1st Number <input type="text" id='firstNumber'></p>
-    <p>2nd Number <input type="text" id='secondNumber'></p>
-    <p><input type="submit" value="Multiply" id="multiply" onclick="multiplyNumbers()"><input type="submit" value="Divide" id="divide" onclick="divideNumbers()"></p>
-    
-    <div>The result is: <span id='results'></span></div>
-    
-    <hr>
-    
-    09. Write a JavaScript program to get the website URL (loading page).
-    
-    <div id='pageUrl'></div>
+                    <p>Current time is: <span id='currentTime'></span></p> 
+                    
+                </div>
 
+            
+            </div>
+            
+                <div>
+            
+            
+             02. Write a JavaScript program to print the contents of the current window.
+                <div class="alert alert-success space-after" role="alert">
+
+                    <button onclick="printWindow()">Print this page</button>
+
+                </div>
+            
+            
+            </div>
+            
+                <div>
+            
+                03. Write a JavaScript program to get the current date.
+                <p>Expected Output: mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</p>
+            
+                <div class="alert alert-success space-after" role="alert">
+                    <p>Current date is: <span id='date'></span></p>
+
+                </div>
+            </div>
+            
+                <div>
+                04. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</p> 
+            
+                <div class="alert alert-success space-after" role="alert"><span id='target'>w3resource</span>
+                </div>
+
+            </div>
+      
+                <div>
+                05. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050. 
+            
+                <div class="alert alert-success space-after" role="alert">1st January is being a Sunday in : <span id='sunday'></span>
+                </div>
+
+            </div>
+      
+      
+                <div>
+
+            <p>06. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".</p>
+
+            <h4>Guess my number?</h4>
+
+            <input type="text" placeholder="Number between 1 and 10" id='form' style="margin-top:7px"><br />
+            <input type="submit" value="Check It NOW!" id='submit' onclick="quessNumber()" style="margin: 7px 0px;" >
+                
+            <div class="alert alert-success display" role="alert" id='guessNumber'></div>
+
+            </div>
+                
+                <div>
+                <p>07. Write a JavaScript program to calculate days left until next Christmas. </p>
+                <div id='christmas' class="alert alert-success display" role="alert"></div>
+            </div>
     
+                <div>
+                08. Write a JavaScript program to calculate multiplication and division of two numbers (input from user)
+
+                <p>1st Number <input type="text" id='firstNumber'></p>
+                <p>2nd Number <input type="text" id='secondNumber'></p>
+                <p><input type="submit" value="Multiply" id="multiply" onclick="multiplyNumbers()"><input type="submit" value="Divide" id="divide" onclick="divideNumbers()"></p>
+
+                <div class="alert alert-success display" role="alert">The result is: <span id='results'></span></div>
+            
+            </div>
+    
+                <div>
+    
+                09. Write a JavaScript program to get the website URL (loading page).
+
+                <div id='pageUrl' class="alert alert-success display" role="alert"></div>
+            
+            </div>
+        </div>
+      
+
+        </section>
+        
+        <section id="recursion" class="color title blue">
+            <div class="container">
+                <h1>Recursion</h1>
+                
+                <div>
+                
+                01. Write a JavaScript program to find the greatest common divisor (gcd) of two positive numbers.
+     
+                <div id='r01' class="alert alert-success display" role="alert"></div>
+                
+            </div>
+                <div>
+    
+                02. Write a JavaScript program to get the integers in range (x, y).
+                <p>Example : range(2, 9)</p>
+                <p>Expected Output : [3, 4, 5, 6, 7, 8]</p>
+
+                <div id='myRange' class="alert alert-success display" role="alert"></div>
+                
+            </div>
+                
+            <div>
+
+                03. Write a JavaScript program to compute the sum of an array of integers.
+                <p>Example : var array = [1, 2, 3, 4, 5, 6]</p>
+                <p>Expected Output : 21 </p>
+
+                <div id='compute' class="alert alert-success display" role="alert"></div>
+                
+            </div>
+                
+            <div>
+
+                04. Write a JavaScript program to check whether a number is even or not.
+
+                <input type="text" placeholder="Put your number" id='even'>&nbsp;<input type="submit" value="Check NOW!" onclick="getNumber()">
+
+                <div id='evenOrNot' class="alert alert-success space" role="alert"></div>
+                
+            </div>
+                
+            <div>
+                
+                05. Write a merge sort program in JavaScript. 
+                <p>Sample array : [34,7,23,32,5,62]</p>
+                <p>Sample output : [5, 7, 23, 32, 34, 62]</p>
+                
+                <div id='merge' class="alert alert-success display" role="alert"></div>
+                
+            </div>
+                
+            </div>
+        </section>
+        <section id="function" class="title">
+            <div class="container">
+                <h1>Function</h1>
+                
+            <div>
+                
+                01. Write a JavaScript function that reverse a number.
+                <p>Example x = 32243;</p>
+                <p>Expected Output : 34223</p>
+                <div class="alert alert-success display">My Output: <span id="myOutput"></span></div>
+
+            </div>
+            <div>
+
+                02. Write a JavaScript function that generates all combinations of a string.
+                <p>Example string : dog <br />
+                Expected Output : d,do,dog,o,og,g </p>
+                <div id="ddoogg" class="alert alert-success display"></div>
+                
+            </div>
+
+            <div>
+
+                03. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+
+                <p>Example string : 'webmaster'&nbsp;&nbsp; </p> 
+                <p>Expected Output : 'abeemrstw'</p>
+                <div class="alert alert-success display" id="web"></div>
+
+            </div>
+            <div>
+
+                04 Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. 
+                <p>Example string : 'the quick brown fox' </p>
+                <p>Expected Output : 'The Quick Brown Fox '</p>
+                
+                <div id="quick" class="alert alert-success display"></div>
+                
+            </div>
+            <div>
+
+                05. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+                <p>Example string : 'Web Development Tutorial' </p>
+                <p>Expected Output : 'Development'</p>
+                
+                <div id='developer' class="alert alert-success display"></div>
+
+            </div>
+                
+            <div>
+
+                06. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively. 
+                <p>Sample array : [1,2,3,4,5]</p>
+                <p>Expected Output : 2,4 </p>
+                
+                <div id='twoNumbers' class="alert alert-success display"></div>
+
+            </div>
+
+            <div>
+                07. Write a JavaScript function to compute the factors of a positive integer.
+                
+                <div id="integer" class="alert alert-success display"></div>
+
+            </div>
+                
+            <div>
+
+                08. Write a JavaScript function to convert an amount to coins. 
+                Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
+                <p>Here 46 is the amount. and 25, 10, 5, 2, 1 are coins. </p>
+                <p>Output : 25, 10, 10, 1</p>
+                <div id="coins" class="alert alert-success display"></div>
+
+            </div>
+               
+            <div>    
+                09. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
+                <p>Sample arguments : 'w3resource.com', 'o' </p>
+                <p>Expected output : 2 </p>
+
+                <div id='accept' class="alert alert-success display"></div>
+                
+            </div>
+                
+            <div>
+
+                 10. Write a JavaScript function to find the first not repeated character. 
+                <p>Sample arguments : 'abacddbec' </p>
+                <p>Expected output : 'e'</p> 
+
+                <div id='notRepeat' class="alert alert-success display"></div>
+                
+            </div>
+
+            <div>
+                11. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.Sample function : <p>Longest_Country_Name(["Australia", "Germany", "United States of America"]) </p><p>Expected output : "United States of America"</p>
+            
+                <div id="longest" class="alert alert-success display"></div>
+            </div>
+
+
+            <div>
+                12. Write a JavaScript function to get the function name.
+                
+                <div class="alert alert-success"></div>
+                
+            </div>
+    
+            </div>
+        </section>
+    
+        <section id="conditionals" class="color title">
+            <div class="container">
+            <h1>Conditionals</h1>
+                
+               <div> 
+                 01. Write a JavaScript program that accept two integers and display the larger.
+        
+                <p>Provide first number <input id="firstNum"></p>
+                <p>Provide second number <input id="secondNum"></p>
+                    <p><input type="submit" value="Check Numbers NOW!" onclick="checkMyNumbers()"></p>
+
+                   <div id="twoIntegers" class="alert alert-success display"></div>
+                   
+                </div>
+                
+                <div>
+
+                   02. Write a JavaScript conditional statement to find the sign of product of three numbers. Display an box with the specified sign. 
+                    <p>Sample numbers : 3, -7, 2 </p>
+                    <p>Output : The sign is -  </p>
+
+                    <div id="mySignD" class="alert alert-success">To see results please use Console</div>
+                    
+                </div>
+
+                <div>
+                    03. Write a JavaScript conditional statement to sort three numbers.
+                    <p>Sample numbers : 0, -1, 4 </p>
+                    <p>Output : 4, 0, -1 </p>
+
+                    <div id="threeNumbers" class="alert alert-success"></div>
+                    
+                </div>
+                
+                <div>
+
+                    04. Write a JavaScript conditional statement to find the largest of five numbers. Display an box to show the result. 
+                    <p>Sample numbers : -5, -2, -6, 0, -1 </p>
+                    <p>Output : 0 </p>
+
+                    <div id="largestOf" class="alert alert-success"></div>
+                    
+                </div>
+                
+                <div>
+
+                    05. Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen. 
+                        <p>Sample Output : <br />
+                        "0 is even" <br />
+                        "1 is odd" <br />
+                        "2 is even" <br />
+                        ---------- <br />
+                        ---------- </p>
+                
+                    <div id='checkIf' class="alert alert-success"></div>
+                    
+                </div>
+                
+                <div>
+
+                    06. Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+                    <div id="buzz" class="alert alert-success"></div>
+                    
+                </div>
+
+                <div>
+                    07. Write a JavaScript program to sum the multiples of 3 and 5 under 1000.
+
+                    <div id="multiplySum" class="alert alert-success"></div>
+                    
+                </div>
+                
+                <div>
+
+                    08. Write a JavaScript program to construct the following pattern, using a nested for loop.
+
+                        <p>*  <br />
+                            * *  <br />
+                            * * *  <br />
+                            * * * *  <br />
+                            * * * * * </p>
+    
+                    <div id='pattern' class="alert alert-success">To see results please use Console</div>
+                    
+                </div>
+                
+            </div>
+        </section>
+        <section id="array" class="title">
+            <div class="container">
+                <h1>Array</h1>
+            <div>    
+                
+                01. Write a JavaScript function to check whether an `input` is an array or not. 
+                <p>Test Data :</p>
+                <p>console.log(is_array('w3resource')); <br />
+                console.log(is_array([1, 2, 4, 0]));</p>
+                <p>false<br />
+                true</p>
+
+                <div id="isArray01" class="alert alert-success display"></div>
+                
+            </div>
+
+            <div>
+                
+                02. Write a JavaScript function to clone an array.
+                <p>Test Data :</p>
+                <p>console.log(array_Clone([1, 2, 4, 0])); <br />
+                console.log(array_Clone([1, 2, [4, 0]]));</p>
+                <p>[1, 2, 4, 0] <br />
+                [1, 2, [4, 0]]</p>
+
+                <div id="clone" class="alert alert-success display"></div>
+                
+            </div>
+
+            <div>
+                
+                03. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. 
+                <p>Test Data : </p>
+                <p>console.log(first([7, 9, 0, -2]));</p>
+                <p>console.log(first([],3));</p>
+                <p>console.log(first([7, 9, 0, -2],3));</p>
+                <p>console.log(first([7, 9, 0, -2],6));</p>
+                <p>console.log(first([7, 9, 0, -2],-3));</p>
+                <p>Expected Output : </p>
+                <p>7</p>
+                <p>[] </p>
+                <p>[7, 9, 0] </p>
+                <p>[7, 9, 0, -2] </p>
+                <p>[] </p>
+            
+                <div id='nFirst' class="alert alert-success"></div>
+                
+            </div>
+
+            </div>
+        </section>
+      
+      
+      </div>
+      
+    
+    <footer>
+    
+        <p>JavaScript Exercises 2016</p>
+    
+    </footer>
+      
+      
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
     
     <script>
-        
-        //website url
-        document.getElementById("pageUrl").innerHTML =
-        "Page hostname is " + window.location.hostname;        
-        
-        
-        //today's day a week
-        document.getElementById('todayIs').innerHTML = 'Today is: ' + week[day];
-        
-        //currently hour - 12 hours type 
-        document.getElementById('currentTime').innerHTML = 'Current time is: ' + hour + AmPm + ' : ' + min + ' : ' + sec;
-    
-        document.getElementById('currentDate').innerHTML = date01 + ', ' + date02 + ' or ' + date03 + ', ' + date04;
-        
-        
-        
-       //rotate last letter forn the string into first position
-        function rotateText(id){
-        
+          
+          
+       //exercise 01
+        document.getElementById('todayIs').innerHTML = todayIs;
+         document.getElementById('currentTime').innerHTML = hours + minute + ' : ' + second;
+      
+      //exercise 03
+          document.getElementById('date').innerHTML = mdy + ', ' + mmddyy + ', ' + dmy + ', ' + ddmmyy;
+          
+        // exercice 04
+          
+        (function rotateLastLetter() {
             var element = document.getElementById('target');
-            var textNode = element.childNodes[0];
-            var text = textNode.data;
-            
-            //set up time delay 
-            setInterval(function(){ 
-                
-                text = text[text.length - 1] + text.substring(0, text.length - 1);  
-                textNode.data = text;                      
+            var myText = element.childNodes[0];
+            var text = myText.data;
+
+            return setInterval(function() {    
+            text = text[text.length - 1] + text.substring(0, text.length - 1);
+            myText.data = text;
             }, 700);
-    
-        };
+        })();
+          
+          
+        document.getElementById("sunday").innerHTML = januarySunday; 
         
-        
-    
-        
-   //Guess my number game (numbers between 1-10)     
-    var x = Math.random() * 10;
-        
-    var y = Math.floor(x) + 1;
-        
-    var z = document.getElementById('form');
-    
-
-        
-    document.getElementById('submit').onclick = function(){
-        
-        
-        if (z.value === "" || z.value > 10 || z.value < 0) {
-            
-           document.getElementById('guessNumber').innerHTML = 'Please provide number between 1 and 10';
-        } else {
-            
-            if (z.value == y) {
-                
-document.getElementById('guessNumber').innerHTML = 'Congratulation!!! You did it :)';
-            
-            } else {
-            
-            document.getElementById('guessNumber').innerHTML = 'I\'m sorry, try one more time';
-            }
-
-        }
-  };
-        
-        //Calculating date until Christmas
+        //Exercise 07
+         //Calculating date until Christmas
         
         today = new Date();
         
         var christmas = new Date (today.getFullYear(), 11, 25);
         
             if (today.getMonth() == 11 && today.getDate() > 25 ){
-
                 christmas.setFullYear(christmas.getFullYear() + 1);
             }
         
@@ -191,44 +535,109 @@ document.getElementById('guessNumber').innerHTML = 'Congratulation!!! You did it
         var howMany = (Math.ceil((christmas.getTime() - today.getTime())/oneDay));
         
         
-        document.getElementById('christmas').innerHTML = 'It\'s ' + howMany + ' days left to Christmas!'; 
+        document.getElementById('christmas').innerHTML = 'It\'s ' + howMany + ' days left to Christmas!';
         
         
-       // Multiply and divide
+        //Exercise 09
         
-        function multiplyNumbers (){
+        //website url
+        document.getElementById("pageUrl").innerHTML =
+        "Page hostname is " + window.location.hostname;   
+        
+      </script>
+    <script>
+    
+        //from file function
+        
+        
+        //Define a reverse function
+       
+
+
+    
+//Exercise R01
+        
+    document.getElementById('r01').innerHTML = newGCD;
+
+//Exercise R02
+    document.getElementById('myRange').innerHTML = myRange;
+        
+//Exercise R03
+    document.getElementById('compute').innerHTML = compute([1,2,3,4,5,6]);
+        
+        
+//Exercise R05
+  document.getElementById('merge').innerHTML = arrSort([34,7,23,32,5,62]);
             
-            num1 = document.getElementById('firstNumber').value;
-            num2 = document.getElementById('secondNumber').value;
-            
-            document.getElementById('results').innerHTML = num1 * num2;
-            
-        }
+//Exercise F01       
+document.getElementById('myOutput').innerHTML = myOutput(32243);
         
-        function divideNumbers (){
-            
-            num1 = document.getElementById('firstNumber').value;
-            num2 = document.getElementById('secondNumber').value;
-            
-            document.getElementById('results').innerHTML = num1 / num2;
-            
-        }
+//Exercise F02
+document.getElementById('ddoogg').innerHTML = substrings('dog');
+
+//Exercise F03
+document.getElementById('web').innerHTML = getDataWeb('webmaster');
         
+//Exercise F04
+document.getElementById('quick').innerHTML = upperCase('the quick brown fox');
         
+//Exercise F05      
+document.getElementById('developer').innerHTML = 'The longest word is: ' + longestWord('Web Development Tutorial')
+
+//Exercise F06
+document.getElementById('twoNumbers').innerHTML = 'My Output is: ' + lowestGreates([3,4,5,2,1]) + '.';
+
+//Exercise F07
+document.getElementById('integer').innerHTML = 'Number 15:  ' + myFactor(15) + '<br />' + 'Number 16:  ' + myFactor(16) + '<br />' + 'Number 17:  ' + myFactor(17) + '<br />';
         
+//Exercise F08
+document.getElementById('coins').innerHTML = amountTocoins(46, [25, 10, 5, 2,1]);
+        
+//Exercise F09
+document.getElementById('accept').innerHTML = howManyLetters('w3resource.com','o');
+        
+//Exercise F10
+document.getElementById('notRepeat').innerHTML = 'Here is my first not repeated character: ' + checkLetters('abacddbec');
+        
+//Exercise F11
+document.getElementById('longest').innerHTML = 'The longest name is: ' + Longest_Country_Name(["Australia", "Germany", "United States of America"]);
+
+
+        
+//Exercise C03
+        
+document.getElementById('threeNumbers').innerHTML = sortNumbers([0,-1,4]);
+
+        
+//Exercise C04
+        
+document.getElementById('largestOf').innerHTML = largestNumber([-5, -2, -6, 0, -1]);
+    
+//Exercise C05
+document.getElementById('checkIf').innerHTML = evenOrOdd;
+        
+//Exercise C06
+document.getElementById('buzz').innerHTML = fizzBuzz;
+        
+//Exercise C07
+document.getElementById('multiplySum').innerHTML = 'Multiply 3 and 5 under 1000: <br />' + multiply;
+        
+//Exercise A01
+document.getElementById('isArray01').innerHTML = 'Is \'w3resource\' array? - ' + is_array(ae) + '<br /> Is [1,2,4,0] array? - ' + is_array(eb);
+        
+    
+//Exercise A02
+document.getElementById('clone').innerHTML = '[' + array_Clone([1, 2, 4, 0]) + '] <br />' + '[' + array_Clone([1, 2]) + '[' + array_Clone([4, 0]) + ']]';
+        
+//Exercise A03
+document.getElementById('nFirst').innerHTML = '[' + first([7, 9, 0, -2]) + ']<br />' + 
+'[' + first([],3) + ']<br />' +
+'[' + first([7, 9, 0, -2],3) + ']<br />' +
+'[' + first([7, 9, 0, -2],6) + ']<br />' +
+'[' + first([7, 9, 0, -2],-3) + ']';
+
     </script>
     
-    
-    
-    
-    
-</body>
-
-
-
-
-
-
-
-
+      
+  </body>
 </html>

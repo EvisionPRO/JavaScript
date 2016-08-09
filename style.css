@@ -1,0 +1,44 @@
+#logo {
+    font: Oswald;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.4em;
+    margin-right: 40px;
+}
+
+h1 {
+    
+    font-family: Lato;
+    font-weight: 500;
+    
+}
+
+#basic {
+    margin-top: 30px;
+}
+
+body {
+  position: relative;
+}
+
+.title {
+    padding-top: 60px;
+}
+
+.space {
+    margin: 5px 0px;
+}
+
+footer {
+    
+    width: 100%;
+    height: auto;
+    background-color: darkgrey;
+    
+}
+
+footer p {
+    color: aliceblue;
+    text-align: center;
+    padding: 15px 0px;
+}
