@@ -217,7 +217,7 @@ var compute = function(array) {
 
 
 //create function which taking number from input and passing to even function
-function evenOrOdd(number) {
+function evenOrOdd1(number) {
         //create empty container
         var myArr = '';
         
@@ -231,7 +231,7 @@ function evenOrOdd(number) {
             myArr += 'I\'m sorry, number ' + number + ' is odd number';
             }
     //log results
-    return document.getElementById('evenOrNot').innerHTML = myArr;
+    return document.getElementById('evenOrNot10').innerHTML = myArr;
 };
 
 
@@ -241,7 +241,7 @@ function getNumber() {
     var arr = document.getElementById('even').value;
     
     //calling function 
-    return evenOrOdd(arr);
+    return evenOrOdd1(arr);
 }
 
 
